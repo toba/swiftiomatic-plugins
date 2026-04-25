@@ -11,14 +11,14 @@ let package = Package(
     ],
     targets: [
         .binaryTarget(
-            name: "sm",
+            name: "SmBinary",
             url: "https://github.com/toba/swiftiomatic/releases/download/v0.31.12/sm.artifactbundle.zip",
             checksum: "0000000000000000000000000000000000000000000000000000000000000000"
         ),
         .plugin(
             name: "SwiftiomaticBuildToolPlugin",
             capability: .buildTool(),
-            dependencies: [.target(name: "sm")]
+            dependencies: [.target(name: "SmBinary")]
         ),
         .plugin(
             name: "SwiftiomaticFormatPlugin",
@@ -28,7 +28,7 @@ let package = Package(
                     .writeToPackageDirectory(reason: "Formats Swift sources in place.")
                 ]
             ),
-            dependencies: [.target(name: "sm")]
+            dependencies: [.target(name: "SmBinary")]
         ),
         .plugin(
             name: "SwiftiomaticLintPlugin",
@@ -38,7 +38,7 @@ let package = Package(
                     description: "Lint Swift source files with sm."
                 )
             ),
-            dependencies: [.target(name: "sm")]
+            dependencies: [.target(name: "SmBinary")]
         ),
     ]
 )
