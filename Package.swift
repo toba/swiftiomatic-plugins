@@ -12,8 +12,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "SmBinary",
-            url: "https://github.com/toba/swiftiomatic/releases/download/v3.12.2/sm.artifactbundle.zip",
-            checksum: "be9aff6c514fd160a169da6f388e79fb82a8670d22bed02f82feebf98f6c983b"
+            url: "https://github.com/toba/swiftiomatic/releases/download/v3.12.3/sm.artifactbundle.zip",
+            checksum: "bfca659001fd4521ff90f6a4296f419e24cb5cca809a31315cf9ae7ad699b679"
         ),
         .plugin(
             name: "SwiftiomaticBuildToolPlugin",
